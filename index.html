@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#17324d">
+<title>Wales Family Roadtrip 2026</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="app-header">
+  <div><p class="eyebrow">17 t/m 31 juli</p><h1>Wales Family Roadtrip 2026</h1><p>Je complete vakantie-app: reisprogramma, wandelingen, reserveringen en snelle routekaarten.</p></div>
+  <button class="install-button" id="installButton" type="button" hidden>Installeren</button>
+</header>
+<main>
+  <section class="hero-panel">
+    <div class="trip-map" aria-label="Route overzicht">
+      <div class="map-node node-manchester"><span>1</span>Manchester</div>
+      <div class="map-node node-betws"><span>2</span>Betws-y-Coed</div>
+      <div class="map-node node-brecon"><span>3</span>Hugh's Chapel</div>
+      <div class="map-node node-cardiff"><span>4</span>Cardiff</div>
+      <svg viewBox="0 0 360 220" role="img" aria-label="Schematische route Manchester naar Cardiff"><path class="route phase-one" d="M295 28 C250 44 230 62 214 80"/><path class="route phase-two" d="M214 80 C163 83 120 72 77 104"/><path class="route phase-three" d="M77 104 C116 154 176 153 214 139"/><path class="route phase-four" d="M214 139 C236 166 251 180 268 196"/></svg>
+    </div>
+    <div class="quick-stats"><div><strong>15</strong><span>dagen</span></div><div><strong>4</strong><span>reisblokken</span></div><div><strong>10</strong><span>boekingen</span></div><div><strong>9</strong><span>wandelingen</span></div></div>
+  </section>
+  <section class="toolbar"><label class="search-box"><span>Zoek</span><input id="searchInput" type="search" placeholder="dag, plek, activiteit..."></label><div class="segmented" role="tablist" aria-label="Fase filter"><button class="chip active" type="button" data-filter="all">Alles</button><button class="chip" type="button" data-filter="Manchester">Manchester</button><button class="chip" type="button" data-filter="Snowdonia">Snowdonia</button><button class="chip" type="button" data-filter="Brecon">Brecon</button><button class="chip" type="button" data-filter="Cardiff">Cardiff</button></div></section>
+  <section class="view active" id="programView"><div class="section-heading"><h2>Reisprogramma</h2><p>Per dag: hoogtepunt, slaapplek, mooi-weerplan en regenoptie.</p></div><div class="day-list" id="dayList"></div></section>
+  <section class="view" id="walksView"><div class="section-heading"><h2>Wandelingen</h2><p>Routes voor Peter en Julius, plus ontspannen opties voor iedereen.</p></div><div class="walk-list" id="walkList"></div></section>
+  <section class="view" id="bookingsView"><div class="section-heading"><h2>Reserveringen</h2><p>Alle geboekte onderdelen op een rij, inclusief tijden en verblijfplaatsen.</p></div><div class="booking-list" id="bookingList"></div></section>
+  <section class="view" id="mapsView"><div class="section-heading"><h2>Kaarten</h2><p>Routekaarten en wandeloverzichten voor onderweg.</p></div><div class="map-grid" id="mapGrid"></div></section>
+</main>
+<nav class="bottom-nav" aria-label="Hoofdnavigatie"><button class="nav-item active" type="button" data-view="programView">Plan</button><button class="nav-item" type="button" data-view="walksView">Wandel</button><button class="nav-item" type="button" data-view="bookingsView">Boekingen</button><button class="nav-item" type="button" data-view="mapsView">Kaarten</button></nav>
+<script src="app.js"></script>
+</body>
+</html>
